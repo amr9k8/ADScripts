@@ -1,23 +1,19 @@
-# ADScripts
-some scripts used in AD Pentesting
+
 # PSRemoting Checker
 
-A PowerShell script to identify domain computers accessible via PowerShell Remoting with provided credentials.
+A Simple PowerShell script to identify domain computers accessible via PowerShell Remoting with provided credentials of An User.
 
 ## Features
 
-- Automatic download of required PowerView module
+
 - Domain computer enumeration
 - PSRemoting accessibility testing
-- Clear success/failure reporting
 - Summary of compromised machines
-- Temporary file cleanup
 
 ## Prerequisites
 
-- PowerShell 5.1+
 - Network access to domain controller
-- HTTP server hosting PowerView.ps1
+- HTTP server hosting PowerView.ps1 on port 445
 - Valid domain credentials
 
 ## Usage
@@ -60,7 +56,7 @@ Total accessible machines: 3
 
 1. Host PowerView.ps1 on your attack machine:
    ```bash
-   python3 -m http.server 80
+   python3 -m http.server 445
    ```
 2. Clone repository:
    ```bash
